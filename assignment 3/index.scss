@@ -1,0 +1,115 @@
+body {
+  background-color: gray;
+}
+.nav-main {
+  width: 100%;
+  height: 60px;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+  //   ul, li and li a are not active u have to uncomment them from index.html first.
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    li {
+      list-style: none;
+      line-height: 60px;
+    }
+
+    li a {
+      display: block;
+      height: 100%;
+      padding: 0 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #111;
+      font-family: arial;
+      font-size: 1.2 rem;
+    }
+  }
+}
+// button toggle navigation
+.btn-toggle-nav {
+  background-color: gray;
+  background-image: url("./images/menu-button-of-three-horizontal-lines.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 60px;
+  height: 100%;
+  background-position: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    background-color: white;
+  }
+}
+// navigation sidebar
+.nav-sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  padding: 0 5px;
+  top: 60px;
+  //   height: calc(100vh - 60px);
+  background-color: #1b1b1b;
+  z-index: 1000;
+  transition-property: transform;
+  transition: 300ms ease-in-out;
+  ul {
+    padding-top: 15px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  li {
+    line-height: 60px;
+    list-style: none;
+  }
+  li:nth-child(2) {
+    background-color: red;
+  }
+  li:nth-child(3) {
+    background-color: orange;
+  }
+  li:nth-child(4) {
+    background-color: purple;
+  }
+  li:nth-child(5) {
+    background-color: green;
+  }
+  li:nth-child(6) {
+    background-color: gray;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition-property: transform;
+    transition: 300ms ease-in-out;
+  }
+
+  a {
+    display: block;
+    height: 60px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: arial;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transition-property: transform;
+    transition: 300ms ease-in-out;
+    &:hover {
+      border: 5px solid #222;
+    }
+  }
+}
